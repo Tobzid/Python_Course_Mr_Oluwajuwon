@@ -1,0 +1,7 @@
+from bs4 import BeautifulSoup
+import requests
+url = "https://www.google.com/search?gs_ssp=eJzj4tTP1TcwNDM2qTBg9OLITcxTSM4sqQQAOm8F7Q&q=man+city&oq=man&gs_lcrp=EgZjaHJvbWUqDwgDEC4YQxixAxiABBiKBTIGCAAQRRg5Mg0IARAAGJECGIAEGIoFMg0IAhAAGJECGIAEGIoFMg8IAxAuGEMYsQMYgAQYigUyCggEEC4YsQMYgAQyEAgFEC4YxwEYsQMY0QMYgAQyIggGEC4YrwEYxwEYsQMYgAQYigUYjgUYmAUYmgUYngUYjQYyBwgHEAAYgAQyCggIEC4YsQMYgAQyDQgJEC4YgwEYsQMYgATSAQk4NDc5ajBqMTWoAgiwAgHxBUAEapK3UeCC8QVABGqSt1Hggg&sourceid=chrome&ie=UTF-8 "
+
+page = requests.get(url)
+soup = BeautifulSoup(page.text, "html")
+print(soup)
