@@ -1,0 +1,18 @@
+import os, shutil
+path = r"C:/Users/tobzi/Documents/Tobzid Jobs App/Industry CV-Supply Chain/CV FILES/"
+
+folder_names = ["pdf files", "docx files", "text files" ]
+for loop in range(0,2):
+    if not os.path.exists(path + folder_names[loop]):
+        print(path + folder_names[loop])
+        os.makedirs((path + folder_names[loop]))
+
+for file in file_name:
+    if ".pdf" in file and not os.path.exists(path + "pdf files/" + file):
+        shutil.move(path + file, path + "pdf files/" + file)
+    elif ".docx" in file and not os.path.exists(path + "docx files/" + file):
+        shutil.move(path + file, path + "docx files/" + file)
+    elif ".txt" in file and not os.path.exists(path + "text files/" + file):
+        shutil.move(path + file, path + "text files/" + file)
+    else:
+        print("There are path in this path that were not moved")
