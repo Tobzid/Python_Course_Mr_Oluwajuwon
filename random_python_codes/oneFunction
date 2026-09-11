@@ -1,0 +1,4 @@
+number = 3
+def number_square(number):
+    print(number**2)
+number_square(number)
